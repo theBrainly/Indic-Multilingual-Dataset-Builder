@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indic-dataset-builder"
+version = "0.1.0"
+description = "Collect, clean, align, validate, enrich, govern and export high-quality multilingual (Indic) datasets for LLM training."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Dataset Curation Engineer" }]
+keywords = ["llm", "datasets", "multilingual", "indic", "deduplication", "data-curation"]
+
+# Core dependencies are intentionally light and mostly pure-python so the
+# end-to-end demo runs anywhere without large model downloads.
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "datasketch>=1.6",      # MinHash + LSH (pure python)
+    "regex>=2023.0",
+    "pandas>=1.5",
+    "pyarrow>=12.0",        # Parquet / Arrow
+    "numpy>=1.23",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+# Heavy / network features. The pipeline degrades gracefully without them.
+full = [
+    "sentence-transformers>=2.2",
+    "faiss-cpu>=1.7",
+    "beautifulsoup4>=4.12",
+    "requests>=2.31",
+    "datasets>=2.14",       # Hugging Face datasets export
+    "scrapy>=2.11",         # large-scale polite web crawling
+    "dask[dataframe]>=2023.1",  # distributed dedup/filter
+    "soundfile>=0.12",      # audio duration/quality for speech curation
+    "elasticsearch>=8.0",   # keyword index backend
+]
+# Speech-only extras (lighter than `full`).
+speech = ["soundfile>=0.12"]
+# Distributed-only extras.
+distributed = ["dask[dataframe]>=2023.1"]
+# Streamlit dashboard.
+ui = ["streamlit>=1.30"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1",
+]
+
+[project.scripts]
+indic-dataset = "indic_dataset_builder.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

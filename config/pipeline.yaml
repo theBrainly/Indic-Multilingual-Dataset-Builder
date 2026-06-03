@@ -1,0 +1,68 @@
+# End-to-end pipeline configuration.
+# A run is fully described by this file + the input manifest, which makes
+# curation reproducible and the resulting dataset version deterministic.
+
+dataset:
+  name: indic-multilingual-demo
+  version: "0.1.0"
+  description: "Demo multilingual Indic corpus curated end-to-end."
+  license: "CC-BY-4.0"
+
+# ---- COLLECT -------------------------------------------------------------
+collect:
+  sources:
+    - type: file
+      path: data/sample/raw.jsonl
+    # - type: web
+    #   urls_file: data/sources/urls.txt
+    # - type: api
+    #   endpoint: https://example.org/api/docs
+    # - type: warc
+    #   path: data/sample/sample.warc
+
+# ---- CLEAN + FILTER ------------------------------------------------------
+clean:
+  normalize: true
+  detect_language: true
+  filters:
+    min_chars: 20
+    max_chars: 100000
+    min_words: 4
+    max_symbol_ratio: 0.30        # drop docs that are mostly punctuation/symbols
+    max_digit_ratio: 0.40
+    max_repeated_line_ratio: 0.30 # boilerplate / template spam
+    min_mean_word_length: 1.5
+    require_known_language: true
+
+# ---- ALIGN ---------------------------------------------------------------
+align:
+  enabled: true
+  length_ratio_max: 2.5           # accept pairs whose char-length ratio < this
+
+# ---- VALIDATE + DEDUP ----------------------------------------------------
+validate:
+  exact_dedup: true
+  near_dedup:
+    enabled: true
+    threshold: 0.8                # Jaccard similarity for MinHash/LSH
+    num_perm: 128
+    shingle_size: 4
+  semantic_dedup:
+    enabled: true
+    threshold: 0.92               # cosine similarity
+  contamination:
+    enabled: true
+    benchmarks_file: data/sample/benchmark.jsonl
+    ngram: 13                     # n-gram overlap, GPT-3/Llama style
+
+# ---- ENRICH --------------------------------------------------------------
+enrich:
+  metadata: true
+  diversity: true
+
+# ---- EXPORT --------------------------------------------------------------
+export:
+  output_dir: output
+  formats: [jsonl, parquet]
+  write_dataset_card: true
+  write_manifest: true

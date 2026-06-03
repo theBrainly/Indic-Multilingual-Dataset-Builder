@@ -1,0 +1,74 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ---- Testing / coverage ----
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# ---- Pipeline outputs / data artifacts ----
+output/
+*.parquet
+!**/data/sample/*.parquet
+*.log
+tmp/
+.cache/
+
+# ---- ML / model artifacts (large; should not be committed) ----
+*.bin
+*.pt
+*.onnx
+*.faiss
+models/
+checkpoints/
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+
+# ---- IDE / editor ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Secrets / local config ----
+.env
+.env.*
+*.local

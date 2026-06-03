@@ -1,0 +1,64 @@
+# Indic + reference languages with their Unicode script blocks.
+# Used by clean/language_detect.py for fast, dependency-free script-based
+# language identification — well suited to Indic scripts which rarely overlap.
+languages:
+  hi:
+    name: Hindi
+    script: Devanagari
+    unicode_ranges: [[0x0900, 0x097F]]
+  mr:
+    name: Marathi
+    script: Devanagari
+    unicode_ranges: [[0x0900, 0x097F]]
+  ne:
+    name: Nepali
+    script: Devanagari
+    unicode_ranges: [[0x0900, 0x097F]]
+  bn:
+    name: Bengali
+    script: Bengali
+    unicode_ranges: [[0x0980, 0x09FF]]
+  as:
+    name: Assamese
+    script: Bengali
+    unicode_ranges: [[0x0980, 0x09FF]]
+  pa:
+    name: Punjabi
+    script: Gurmukhi
+    unicode_ranges: [[0x0A00, 0x0A7F]]
+  gu:
+    name: Gujarati
+    script: Gujarati
+    unicode_ranges: [[0x0A80, 0x0AFF]]
+  or:
+    name: Odia
+    script: Odia
+    unicode_ranges: [[0x0B00, 0x0B7F]]
+  ta:
+    name: Tamil
+    script: Tamil
+    unicode_ranges: [[0x0B80, 0x0BFF]]
+  te:
+    name: Telugu
+    script: Telugu
+    unicode_ranges: [[0x0C00, 0x0C7F]]
+  kn:
+    name: Kannada
+    script: Kannada
+    unicode_ranges: [[0x0C80, 0x0CFF]]
+  ml:
+    name: Malayalam
+    script: Malayalam
+    unicode_ranges: [[0x0D00, 0x0D7F]]
+  si:
+    name: Sinhala
+    script: Sinhala
+    unicode_ranges: [[0x0D80, 0x0DFF]]
+  ur:
+    name: Urdu
+    script: Arabic
+    unicode_ranges: [[0x0600, 0x06FF], [0x0750, 0x077F]]
+  en:
+    name: English
+    script: Latin
+    unicode_ranges: [[0x0041, 0x007A]]

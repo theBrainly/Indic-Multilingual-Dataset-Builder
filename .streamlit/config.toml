@@ -1,0 +1,14 @@
+# Streamlit theme — modern, minimal, dark-friendly.
+[theme]
+base = "light"
+primaryColor = "#6366f1"            # indigo accent
+backgroundColor = "#fbfbfd"
+secondaryBackgroundColor = "#f1f2f9"
+textColor = "#1f2333"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
