@@ -1,0 +1,19 @@
+{"id": "hi-1", "text": "भारत एक विशाल देश है जहाँ सैकड़ों भाषाएँ बोली जाती हैं। यह विविधता हमारी सबसे बड़ी ताकत है और इसे संरक्षित करना बहुत ज़रूरी है।", "parallel_id": "p1"}
+{"id": "en-1", "text": "India is a vast country where hundreds of languages are spoken. This diversity is our greatest strength and it is very important to preserve it.", "parallel_id": "p1"}
+{"id": "hi-2", "text": "भारत एक विशाल देश है जहाँ सैकड़ों भाषाएँ बोली जाती हैं। यह विविधता हमारी सबसे बड़ी ताकत है और इसे संरक्षित करना बहुत ज़रूरी है।"}
+{"id": "hi-3", "text": "भारत  एक विशाल देश है जहाँ सैकड़ों भाषाएँ बोली जाती हैं। यह विविधता हमारी सबसे बड़ी ताकत है, और इसे संरक्षित करना अत्यंत आवश्यक है।"}
+{"id": "bn-1", "text": "বাংলা ভাষা পৃথিবীর অন্যতম প্রাচীন এবং সমৃদ্ধ ভাষা। কোটি কোটি মানুষ প্রতিদিন এই ভাষায় কথা বলে এবং সাহিত্য রচনা করে।", "parallel_id": "p2"}
+{"id": "en-2", "text": "Bengali is one of the oldest and richest languages in the world. Millions of people speak it every day and create literature in it.", "parallel_id": "p2"}
+{"id": "ta-1", "text": "தமிழ் மொழி உலகின் மிகப் பழமையான மொழிகளில் ஒன்றாகும். இது செம்மொழி அந்தஸ்து பெற்ற ஒரு வளமான இலக்கிய பாரம்பரியத்தைக் கொண்டுள்ளது."}
+{"id": "te-1", "text": "తెలుగు భాష దక్షిణ భారతదేశంలో విస్తృతంగా మాట్లాడే భాషలలో ఒకటి. దీనిని ఇటాలియన్ ఆఫ్ ది ఈస్ట్ అని కూడా పిలుస్తారు."}
+{"id": "kn-1", "text": "ಕನ್ನಡ ಭಾಷೆ ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಅಧಿಕೃತ ಭಾಷೆಯಾಗಿದೆ. ಇದು ಸಮೃದ್ಧ ಸಾಹಿತ್ಯ ಪರಂಪರೆಯನ್ನು ಹೊಂದಿದೆ ಮತ್ತು ಎಂಟು ಜ್ಞಾನಪೀಠ ಪ್ರಶಸ್ತಿಗಳನ್ನು ಗೆದ್ದಿದೆ."}
+{"id": "noise-1", "text": "!!! ### $$$ %%% &&& *** @@@ ^^^ ~~~ ||| <<< >>>"}
+{"id": "noise-2", "text": "buy now buy now buy now buy now buy now buy now buy now buy now buy now buy now"}
+{"id": "noise-3", "text": "12345 67890 11111 22222 33333 44444 55555 66666 77777 88888"}
+{"id": "short-1", "text": "ok"}
+{"id": "en-dup-1", "text": "Machine learning models require large amounts of high quality training data to perform well across many different tasks and languages."}
+{"id": "en-dup-2", "text": "Machine learning models require large amounts of high quality training data to perform well across many different tasks and languages."}
+{"id": "en-para-1", "text": "Machine learning systems need a lot of high quality training data in order to perform well across a variety of different tasks and languages."}
+{"id": "contam-1", "text": "The capital of France is Paris and the quick brown fox jumps over the lazy dog while the sun sets over the calm and peaceful ocean horizon."}
+{"id": "ml-1", "text": "മലയാളം കേരളത്തിന്റെ ഔദ്യോഗിക ഭാഷയാണ്. ഇത് ദ്രാവിഡ ഭാഷാ കുടുംബത്തിൽ പെടുന്നു, കൂടാതെ സമ്പന്നമായ ഒരു സാഹിത്യ പാരമ്പര്യം ഉണ്ട്."}
+{"id": "gu-1", "text": "ગુજરાતી ભાષા ગુજરાત રાજ્યની સત્તાવાર ભાષા છે. તે ભારતની બંધારણીય રીતે માન્યતા પ્રાપ્ત બાવીસ ભાષાઓમાંની એક છે."}

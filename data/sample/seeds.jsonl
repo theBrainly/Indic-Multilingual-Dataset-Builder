@@ -1,0 +1,3 @@
+{"id": "seed-1", "instruction": "Translate the sentence into Hindi.", "input": "Knowledge is power.", "output": "ज्ञान ही शक्ति है।", "language": "hi", "task_type": "translation"}
+{"id": "seed-2", "instruction": "Summarize the paragraph in one line.", "input": "India has hundreds of languages spanning many families.", "output": "India is highly linguistically diverse.", "language": "en", "task_type": "summarization"}
+{"id": "seed-3", "instruction": "Write a short greeting in Tamil.", "input": "", "output": "வணக்கம், எப்படி இருக்கிறீர்கள்?", "language": "ta", "task_type": "generation"}
